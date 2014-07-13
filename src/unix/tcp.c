@@ -289,7 +289,7 @@ int uv_tcp_keepalive(uv_tcp_t* handle, int on, unsigned int delay) {
   int err;
 
   if (uv__stream_fd(handle) != -1) {
-    err =uv__tcp_keepalive(uv__stream_fd(handle), on, delay);
+    err = uv__tcp_keepalive(uv__stream_fd(handle), on, delay);
     if (err)
       return err;
   }
